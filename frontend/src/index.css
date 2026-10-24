@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #121316;
+    color: #f4ede2;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cinzel', serif;
+  }
+
+  code, pre, .font-code {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Custom scrollbar for dark academia aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #18191e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #323440;
+  border-radius: 4px;
+  border: 1px solid #45121e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b1d2f;
+}
+
+/* Atmospheric effects */
+.vignette-overlay {
+  pointer-events: none;
+  background: radial-gradient(circle, transparent 55%, rgba(10, 10, 14, 0.85) 100%);
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #c5a059 0%, #f3e5ab 50%, #c5a059 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
